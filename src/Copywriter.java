@@ -18,8 +18,10 @@ public class Copywriter {
 			while ((line = r.readLine()) != null) {
 				prev += (line + "\n");
 			}
-
+			r.close();
+			
 			int year = Calendar.getInstance().get(Calendar.YEAR);
+
 			if (!prev.contains("//Copywrited Nicholas, " + year)) {
 				BufferedWriter fw = new BufferedWriter(new FileWriter(f, true));
 				fw.write("\n//Copywrited Nicholas, " + year);
@@ -34,5 +36,4 @@ public class Copywriter {
 		}
 	}
 }
-//Copywrited Nicholas, 2014
 //Copywrited Nicholas, 2015
