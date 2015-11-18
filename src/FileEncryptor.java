@@ -13,7 +13,7 @@ public class FileEncryptor {
 
 	public static void main(String[] args) {
 		String toDecrypt = readFileContents(new File("secretfile.txt"));
-		String e = encrypt(toDecrypt);
+		String e = encrypt("public class FileEncryptor {");
 		System.out.println("Encrypted: " + e);
 		System.out.println(toDecrypt);
 		System.out.println("Decrypted: " + decrypt(e));
